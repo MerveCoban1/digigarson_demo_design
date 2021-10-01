@@ -1,0 +1,3 @@
+/*
+* Sayfa arayüzlerini tutan klasördür.
+* */
