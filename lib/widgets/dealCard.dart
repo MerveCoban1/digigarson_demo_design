@@ -1,3 +1,4 @@
+import 'package:digigarson_demo_design/views/product_detail_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,8 @@ class _DealCardState extends State<DealCard> {
           border: Border.all(width: 2.0,color: Color(0xfff2f2f2)),
         ),
         child: InkWell(
-          onTap: () async{
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailScreen()));
           },
           child: ListView(
             children: [
