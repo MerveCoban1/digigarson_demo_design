@@ -8,15 +8,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  final String nameSurname;
-  final String phoneNumber;
-  final String profilePhoto;
+
 
   const ProfilePage(
-      {Key? key,
-      required this.nameSurname,
-      required this.phoneNumber,
-      required this.profilePhoto})
+      {Key? key,})
       : super(key: key);
 
   @override
