@@ -1,5 +1,4 @@
 //@dart=2.9
-import 'package:digigarson_demo_design/views/qr_scan_screen.dart';
 import 'package:digigarson_demo_design/widgets/categoryCard.dart';
 import 'package:digigarson_demo_design/widgets/dealCard.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
@@ -17,32 +16,25 @@ class _HomeScreenState extends State<HomeScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: buildAppBar(),
-      body: buildListView(),
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-      iconTheme: IconThemeData(
-        color: Colors.orangeAccent,
-      ),
-      backgroundColor: Colors.white70,
-      elevation: 0.0,
-      leading: Icon(Icons.menu),
-      actions: [
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          child: InkWell(
-            onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> QrScan()));},
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.orangeAccent,
+        ),
+        backgroundColor: Colors.white70,
+        elevation: 0.0,
+        leading: Icon(Icons.menu),
+        actions: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
             child: Icon(Icons.qr_code),
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Icon(Icons.shopping_cart),
-        ),
-      ],
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Icon(Icons.shopping_cart),
+          ),
+        ],
+      ),
+      body: buildListView(),
     );
   }
 
