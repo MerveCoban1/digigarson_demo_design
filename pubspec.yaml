@@ -65,6 +65,7 @@ flutter:
     - assets/images/yemek3.jpg
     - assets/images/yemek4.jpg
     - assets/images/profil.png
+    - assets/images/sign.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
