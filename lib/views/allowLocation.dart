@@ -1,3 +1,4 @@
+import 'package:digigarson_demo_design/widgets/showAlertDialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,8 @@ class AllowLocation extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.only(top: 10.0, left:30.0, right: 30.0),
+              padding:
+                  const EdgeInsets.only(top: 10.0, left: 30.0, right: 30.0),
               child: Text(
                 "Please allow your location to continue using app",
                 textAlign: TextAlign.center,
@@ -44,7 +46,9 @@ class AllowLocation extends StatelessWidget {
                   side: BorderSide(
                       color: Colors.orange, width: 1, style: BorderStyle.solid),
                   borderRadius: BorderRadius.circular(20)),
-              onPressed: () {},
+              onPressed: () {
+                showAlertDialog(context);
+              },
               child: Text(
                 "Use current location",
                 style: TextStyle(
