@@ -1,3 +1,5 @@
+import 'package:digigarson_demo_design/views/settings_info.dart';
+import 'package:digigarson_demo_design/views/settings_password.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -54,7 +56,10 @@ class SettingsPage extends StatelessWidget {
                 ),
               ),
               new IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SettingsInfo()));
+                },
                 icon: new Icon(Icons.arrow_forward_ios),
                 color: Colors.grey,
               )
@@ -75,7 +80,12 @@ class SettingsPage extends StatelessWidget {
                 ),
               ),
               new IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SettingsPassword()));
+                },
                 icon: new Icon(Icons.arrow_forward_ios),
                 color: Colors.grey,
               )
