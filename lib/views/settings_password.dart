@@ -24,6 +24,13 @@ class _SettingsPasswordState extends State<SettingsPassword> {
               )),
           Padding(
             padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Change your password",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               controller: passwordController,
               decoration: InputDecoration(
@@ -52,7 +59,8 @@ class _SettingsPasswordState extends State<SettingsPassword> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 300.0, left:10, right:10, bottom:20.0),
+            padding: const EdgeInsets.only(
+                top: 250.0, left: 10, right: 10, bottom: 20.0),
             child: FlatButton(
               minWidth: 320.0,
               height: 50.0,
