@@ -1,4 +1,7 @@
 //@dart=2.9
+import 'package:digigarson_demo_design/views/profile_page.dart';
+import 'package:digigarson_demo_design/views/qr_scan_screen.dart';
+import 'package:digigarson_demo_design/views/settingsPage.dart';
 import 'package:digigarson_demo_design/widgets/categoryCard.dart';
 import 'package:digigarson_demo_design/widgets/dealCard.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
@@ -22,11 +25,15 @@ class _HomeScreenState extends State<HomeScreen>{
         ),
         backgroundColor: Colors.white70,
         elevation: 0.0,
-        leading: Icon(Icons.menu),
         actions: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Icon(Icons.qr_code),
+            child: InkWell(
+              onTap:(){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>QrScan()));
+              },
+              child: Icon(Icons.qr_code),
+            ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
@@ -35,6 +42,73 @@ class _HomeScreenState extends State<HomeScreen>{
         ],
       ),
       body: buildListView(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.all(0.0),
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text("Digigarson"),
+              accountEmail: Text("matrixteknoloji@gmail.com"),
+              currentAccountPicture: Container(
+                child: Image.asset(
+                  'assets/images/logo.png',
+                  fit: BoxFit.cover,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.orangeAccent,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text("Favorites"),
+              onTap: (){
+                //Navigator.push(context, MaterialPageRoute(builder: (context)=>Favorites()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.card_giftcard),
+              title: Text("Orders"),
+              onTap: (){
+                //Navigator.push(context, MaterialPageRoute(builder: (context)=>Orders()));
+              },
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("Settings"),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text("Çıkış Yap"),
+              onTap: (){
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 

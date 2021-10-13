@@ -18,8 +18,8 @@ class SettingsPage extends StatelessWidget {
                 Navigator.pop(context);
               },
               icon: new Icon(
-                Icons.arrow_back_ios,
-                color: Colors.grey,
+                Icons.arrow_back,
+                color: Colors.orangeAccent,
               )),
           Padding(
             padding: const EdgeInsets.only(top: 25.0, bottom: 25.0),

@@ -24,10 +24,10 @@ class ProfilePage extends StatelessWidget {
           ),
           elevation: 0.0,
           leading: GestureDetector(
-            onTap: () {},
+            onTap: () {Navigator.pop(context);},
             child: Icon(
-              Icons.qr_code,
-              size: 40.0,
+              Icons.arrow_back,
+              color:Colors.white,
             ),
           ),
           actions: [
