@@ -1,3 +1,4 @@
+import 'package:digigarson_demo_design/views/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,8 @@ showAlertDialog(BuildContext context) async {
     ),
     onPressed: () {
       Navigator.of(context).pop();
+      Navigator.of(context).pop();
+      Navigator.of(context).push(MaterialPageRoute(builder: (context)=> HomeScreen()));
     },
   );
   Widget allowButton = FlatButton(
@@ -18,6 +21,8 @@ showAlertDialog(BuildContext context) async {
     ),
     onPressed: () {
       Navigator.of(context).pop();
+      Navigator.of(context).pop();
+      Navigator.of(context).push(MaterialPageRoute(builder: (context)=> HomeScreen()));
     },
   );
 

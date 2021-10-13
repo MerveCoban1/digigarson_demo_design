@@ -6,8 +6,9 @@ class DealCard extends StatefulWidget{
   var dealName;
   var dealImage;
   var dealPrice;
+  var dealCategory;
 
-  DealCard(this.dealName, this.dealImage,this.dealPrice);
+  DealCard(this.dealName, this.dealImage,this.dealPrice,this.dealCategory);
 
   @override
   _DealCardState createState() => _DealCardState();
@@ -25,7 +26,7 @@ class _DealCardState extends State<DealCard> {
         ),
         child: InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailScreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductDetailScreen(widget.dealName,widget.dealImage,widget.dealPrice,widget.dealCategory)));
           },
           child: ListView(
             children: [

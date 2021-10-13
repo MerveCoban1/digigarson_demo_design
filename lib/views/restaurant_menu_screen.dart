@@ -5,6 +5,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RestaurantMenuScreen extends StatefulWidget{
+  var categoryName;
+
+  RestaurantMenuScreen(this.categoryName);
+
   @override
   _RestaurantMenuScreenState createState()=>_RestaurantMenuScreenState();
 }
@@ -18,7 +22,6 @@ class _RestaurantMenuScreenState extends State<RestaurantMenuScreen>{
       body: buildListView(),
     );
   }
-
   AppBar buildAppBar() {
     return AppBar(
       iconTheme: IconThemeData(
@@ -26,7 +29,12 @@ class _RestaurantMenuScreenState extends State<RestaurantMenuScreen>{
       ),
       backgroundColor: Colors.white70,
       elevation: 0.0,
-      leading: Icon(Icons.menu),
+      leading: IconButton(
+        onPressed: (){
+          Navigator.pop(context);
+        },
+        icon: Icon(Icons.arrow_back,color: Colors.orangeAccent),
+      ),
       actions: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),

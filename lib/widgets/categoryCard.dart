@@ -1,3 +1,4 @@
+import 'package:digigarson_demo_design/views/restaurant_menu_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,8 @@ class _CategoryCardState extends State<CategoryCard> {
   Widget build(BuildContext context) {
     return Material(
       child: InkWell(
-        onTap: () async{
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>RestaurantMenuScreen(widget.categoryName)));
         },
         child: Padding(
           padding: const EdgeInsets.only(right: 8.0),

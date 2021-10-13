@@ -1,3 +1,4 @@
+import 'package:digigarson_demo_design/views/allowLocation.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -108,7 +109,8 @@ class _SignInState extends State<SignIn> {
                           style: BorderStyle.solid),
                       borderRadius: BorderRadius.circular(20)),
                   onPressed: () {
-                    FocusScopeNode currentFocus = FocusScope.of(context);
+                    Navigator.pop(context);
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=> AllowLocation()));
                   },
                   child: Text(
                     "SEND",

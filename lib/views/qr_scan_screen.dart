@@ -28,6 +28,7 @@ class _QrScanState extends State<QrScan> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
+            Navigator.pop(context);
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => QRViewExample(),
             ));

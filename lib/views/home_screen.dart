@@ -19,95 +19,103 @@ class _HomeScreenState extends State<HomeScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.orangeAccent,
-        ),
-        backgroundColor: Colors.white70,
-        elevation: 0.0,
-        actions: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: InkWell(
-              onTap:(){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>QrScan()));
-              },
-              child: Icon(Icons.qr_code),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Icon(Icons.shopping_cart),
-          ),
-        ],
-      ),
+      appBar: buildAppBar(context),
       body: buildListView(),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.all(0.0),
-          children: [
-            UserAccountsDrawerHeader(
-              accountName: Text("Digigarson"),
-              accountEmail: Text("matrixteknoloji@gmail.com"),
-              currentAccountPicture: Container(
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  fit: BoxFit.cover,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50.0),
-                ),
+      drawer: buildDrawer(context),
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      iconTheme: IconThemeData(
+        color: Colors.orangeAccent,
+      ),
+      backgroundColor: Colors.white70,
+      elevation: 0.0,
+      actions: [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: InkWell(
+            onTap:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>QrScan()));
+            },
+            child: Icon(Icons.qr_code),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Icon(Icons.shopping_cart),
+        ),
+      ],
+    );
+  }
+
+  Drawer buildDrawer(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.all(0.0),
+        children: [
+          UserAccountsDrawerHeader(
+            accountName: Text("Digigarson"),
+            accountEmail: Text("matrixteknoloji@gmail.com"),
+            currentAccountPicture: Container(
+              child: Image.asset(
+                'assets/images/logo.png',
+                fit: BoxFit.cover,
               ),
               decoration: BoxDecoration(
-                color: Colors.orangeAccent,
+                borderRadius: BorderRadius.circular(50.0),
               ),
             ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Home"),
-              onTap: (){
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
-              },
+            decoration: BoxDecoration(
+              color: Colors.orangeAccent,
             ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text("Profile"),
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.favorite),
-              title: Text("Favorites"),
-              onTap: (){
-                //Navigator.push(context, MaterialPageRoute(builder: (context)=>Favorites()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.card_giftcard),
-              title: Text("Orders"),
-              onTap: (){
-                //Navigator.push(context, MaterialPageRoute(builder: (context)=>Orders()));
-              },
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text("Settings"),
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage()));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: Text("Çıkış Yap"),
-              onTap: (){
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
+          ),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text("Home"),
+            onTap: (){
+              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.person),
+            title: Text("Profile"),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage()));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.favorite),
+            title: Text("Favorites"),
+            onTap: (){
+              //Navigator.push(context, MaterialPageRoute(builder: (context)=>Favorites()));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.card_giftcard),
+            title: Text("Orders"),
+            onTap: (){
+              //Navigator.push(context, MaterialPageRoute(builder: (context)=>Orders()));
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text("Settings"),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage()));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: Text("Çıkış Yap"),
+            onTap: (){
+              Navigator.pop(context);
+            },
+          ),
+        ],
       ),
     );
   }
@@ -226,9 +234,9 @@ class _HomeScreenState extends State<HomeScreen>{
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","10TL"),
-                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","10TL"),
-                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","10TL"),
+                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","45.00  TL","Dinner"),
+                DealCard("Karışık Pizza","assets/images/yemek3.jpg","33.50 TL","Pizza"),
+                DealCard("Tatlı","assets/images/yemek2.jpg","100.05 TL","Tatlı"),
               ],
             ),
           ),
@@ -262,9 +270,9 @@ class _HomeScreenState extends State<HomeScreen>{
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","10TL"),
-                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","10TL"),
-                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","10TL"),
+                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","70  TL","Dinner"),
+                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","20  TL","Dinner"),
+                DealCard("Full Chicken Biryani","assets/images/yemek4.jpg","100 TL","Dinner"),
               ],
             ),
           ),
