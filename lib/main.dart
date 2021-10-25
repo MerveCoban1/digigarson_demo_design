@@ -1,4 +1,5 @@
 //@dart=2.9
+import 'package:digigarson_demo_design/views/StartPage.dart';
 import 'package:digigarson_demo_design/views/signin.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignIn(),
+      home: StartPages(),
     );
   }
 }
