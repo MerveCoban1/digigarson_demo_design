@@ -1,5 +1,5 @@
 //@dart=2.9
-import 'package:digigarson_demo_design/views/StartPage.dart';
+import 'package:digigarson_demo_design/views/startPage.dart';
 import 'package:digigarson_demo_design/views/signin.dart';
 import 'package:flutter/material.dart';
 

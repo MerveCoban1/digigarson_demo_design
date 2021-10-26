@@ -5,6 +5,7 @@ import 'appInfoPage3.dart';
 
 class appInfoPage2 extends StatelessWidget {
   const appInfoPage2({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -128,11 +129,11 @@ class appInfoPage2 extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
               ),
-              onTap: (){
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => appInfoPage3()));
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => appInfoPage3()));
+
               },
             ),
           ),

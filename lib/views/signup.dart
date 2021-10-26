@@ -58,7 +58,7 @@ class _SignUpState extends State<SignUp> {
               ),
               Center(
                 child: Text(
-                  "WELCOME TO FOODIZM",
+                  "Digigarson'a Hoş Geldiniz",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,

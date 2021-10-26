@@ -6,7 +6,7 @@ import 'package:adobe_xd/pinned.dart';
 
 import '../appInfoPage1.dart';
 
-class StartPages extends StatefulWidget  {
+class StartPages extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new StartPagess();
 }
@@ -16,8 +16,9 @@ class StartPagess extends State<StartPages> {
 
   StartPagess() {
     _timer = new Timer(const Duration(milliseconds: 1500), () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => XDGooglePixel44XL1()));
+      Navigator.pop(context);
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => XDGooglePixel44XL1()));
     });
   }
 
@@ -32,18 +33,16 @@ class StartPagess extends State<StartPages> {
     return Scaffold(
       backgroundColor: const Color(0xfffbaf03),
       body: Center(
-            child: Text(
-              'DİGİGARSON',
-              style: TextStyle(
-                fontFamily: 'Snap ITC',
-                fontSize: 45,
-                color: const Color(0xffffffff),
-              ),
-              textAlign: TextAlign.left,
-            ),
+        child: Text(
+          'DİGİGARSON',
+          style: TextStyle(
+            fontFamily: 'Snap ITC',
+            fontSize: 45,
+            color: const Color(0xffffffff),
           ),
+          textAlign: TextAlign.left,
+        ),
+      ),
     );
   }
 }
-
-

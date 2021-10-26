@@ -16,17 +16,11 @@ class _XDGooglePixel44XL1 extends State<XDGooglePixel44XL1> {
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: -20.0, end: -19.0),
-            Pin(size: 660.0, start: 0.0),
-            child:
-                // Adobe XD layer: '1' (shape)
-                Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/images/start1.png'),
-                  fit: BoxFit.fill,
-                ),
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: const AssetImage('assets/images/start1.png'),
+                fit: BoxFit.fill,
               ),
             ),
           ),
@@ -135,10 +129,10 @@ class _XDGooglePixel44XL1 extends State<XDGooglePixel44XL1> {
                   textAlign: TextAlign.left,
                 ),
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => appInfoPage2()));
+                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => appInfoPage2()));
+
                 }),
           ),
         ],

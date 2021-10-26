@@ -130,10 +130,10 @@ class appInfoPage3 extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
               onTap: () {
+                Navigator.pop(context);
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => SignUp()));
+                    context, MaterialPageRoute(builder: (context) => SignUp()));
+
               },
             ),
           ),
