@@ -1,4 +1,5 @@
 //@dart=2.9
+import 'package:digigarson_demo_design/views/StartPage.dart';
 import 'package:digigarson_demo_design/views/profile_page.dart';
 import 'package:digigarson_demo_design/views/qr_scan_screen.dart';
 import 'package:digigarson_demo_design/views/settingsPage.dart';
@@ -110,9 +111,9 @@ class _HomeScreenState extends State<HomeScreen>{
           ),
           ListTile(
             leading: Icon(Icons.logout),
-            title: Text("Çıkış Yap"),
+            title: Text("Log out"),
             onTap: (){
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> StartPages()));
             },
           ),
         ],
