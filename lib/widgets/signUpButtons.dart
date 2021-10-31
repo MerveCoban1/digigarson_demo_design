@@ -9,12 +9,12 @@ class SignUpButton extends StatelessWidget {
   SignUpButton(this.image, this.color, this.text);
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Container(
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.only(
-            left: 40.0,
-          ),
+          padding: const EdgeInsets.only(left: 40.0, right: 30.0),
           child: Row(
             children: [
               Padding(
@@ -22,8 +22,8 @@ class SignUpButton extends StatelessWidget {
                 child: Stack(
                   children: [
                     FlatButton(
-                      minWidth: 320.0,
-                      height: 50.0,
+                      minWidth: width * 0.70,
+                      height: height * 0.06,
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
                           side: BorderSide(
@@ -43,11 +43,10 @@ class SignUpButton extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(
-                          right: 40.0, top: 10.0, left: 280.0),
+                      padding: EdgeInsets.only(top: 10.0, left: width * 0.6),
                       child: Container(
-                        height: 30.0,
-                        width: 30.0,
+                        height: height * 0.03,
+                        width: width * 0.03,
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(image), fit: BoxFit.cover),

@@ -10,51 +10,56 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Material(
       child: Stack(children: [
         Column(
           children: [
             new Container(
-              height: 500.0,
+              height: height * 0.7,
               decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/images/signup.jpeg"),
                     fit: BoxFit.cover),
               ),
             ),
-            Container(
-              height: 160.0,
-              decoration: BoxDecoration(
-                color: Colors.white,
+            Center(
+              child: Container(
+                height: height * 0.3,
+                width: width * 1,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
               ),
             )
           ],
         ),
         Positioned(
-          top: 280.0,
-          left: 35.0,
+          top: height * 0.3,
+          left: width * 0.1,
           child: Container(
-            width: 340.0,
-            height: 350.0,
+            width: width * 0.8,
+            height: height * 0.6,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(40.0),
-                boxShadow: [BoxShadow(blurRadius: 1.0, color: Colors.grey)]),
+                boxShadow: [BoxShadow(blurRadius: 2.0, color: Colors.grey)]),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(
-            top: 290.0,
+          padding: EdgeInsets.only(
+            top: height * 0.16,
+            left: width * 0.04,
           ),
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-
             children: [
               Icon(Icons.person_outline_rounded,
                   color: Colors.orange, size: 50.0),
               SizedBox(
-                height: 10.0,
+                height: height * 0.01,
               ),
               Center(
                 child: Text(
