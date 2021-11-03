@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 class AllowLocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
         children: [
           new Container(
-            height: 300.0,
+            height: height*0.5,
             decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("assets/images/location.png"),
@@ -39,7 +41,7 @@ class AllowLocation extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 60.0, left: 65.0, right: 65.0),
             child: FlatButton(
-              minWidth: 320.0,
+              minWidth: width*0.4,
               height: 50.0,
               color: Colors.white,
               shape: RoundedRectangleBorder(

@@ -36,11 +36,11 @@ class _SignUpState extends State<SignUp> {
           ],
         ),
         Positioned(
-          top: height * 0.3,
+          top: height * 0.41,
           left: width * 0.1,
           child: Container(
             width: width * 0.8,
-            height: height * 0.6,
+            height: height * 0.4,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(40.0),
@@ -49,7 +49,7 @@ class _SignUpState extends State<SignUp> {
         ),
         Padding(
           padding: EdgeInsets.only(
-            top: height * 0.16,
+            top: height * 0.22,
             left: width * 0.04,
           ),
           child: Column(
@@ -63,7 +63,7 @@ class _SignUpState extends State<SignUp> {
               ),
               Center(
                 child: Text(
-                  "Digigarson'a Hoş Geldiniz",
+                  "Welcome to Digigarson",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,

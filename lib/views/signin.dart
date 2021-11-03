@@ -8,34 +8,31 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   TextEditingController numberController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Material(
       child: Stack(children: [
         Column(
           children: [
             new Container(
-              height: 500.0,
+              height: height * 0.6,
               decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/images/sign.jpg"),
                     fit: BoxFit.cover),
               ),
             ),
-            Container(
-              height: 183.0,
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-            )
           ],
         ),
         Positioned(
-          top: 280.0,
-          left: 35.0,
+          top: width * 0.75,
+          left: height * 0.045,
           child: Container(
-            width: 340.0,
-            height: 350.0,
+            width: width * 0.82,
+            height: height * 0.45,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(40.0),
@@ -43,8 +40,8 @@ class _SignInState extends State<SignIn> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(
-            top: 290.0,
+          padding: EdgeInsets.only(
+            top: width * 0.78,
           ),
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.end,
@@ -110,7 +107,8 @@ class _SignInState extends State<SignIn> {
                       borderRadius: BorderRadius.circular(20)),
                   onPressed: () {
                     Navigator.pop(context);
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=> AllowLocation()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => AllowLocation()));
                   },
                   child: Text(
                     "SEND",

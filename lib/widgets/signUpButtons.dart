@@ -43,10 +43,10 @@ class SignUpButton extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 10.0, left: width * 0.6),
+                      padding: EdgeInsets.only(top: height*0.01, left: width * 0.6),
                       child: Container(
-                        height: height * 0.03,
-                        width: width * 0.03,
+                        height: height * 0.04,
+                        width: width * 0.08,
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(image), fit: BoxFit.cover),
