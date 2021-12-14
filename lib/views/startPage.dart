@@ -4,7 +4,7 @@ import 'package:digigarson_demo_design/views/settings_info.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-import '../appInfoPage1.dart';
+import 'appInfoPage1.dart';
 
 class StartPages extends StatefulWidget {
   @override

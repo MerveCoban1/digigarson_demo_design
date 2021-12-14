@@ -57,7 +57,7 @@ class _RestaurantMenuScreenState extends State<RestaurantMenuScreen>{
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Text(
-              "DIGIGARSON",
+              "DIJIGARSON",
               style: TextStyle(
                 fontSize: 20.0,
                 color: Colors.grey[400],

@@ -42,23 +42,25 @@ class appInfoPage2 extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 31.0, end: 31.0),
             Pin(size: 35.0, middle: 0.7904),
-            child: Text(
-              'Yemek Sipariş Et & Öde',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 31,
-                color: const Color(0xe5000000),
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w700,
+            child: Center(
+              child: Text(
+                'Order & Pay Meal',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 31,
+                  color: const Color(0xe5000000),
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
               ),
-              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromPins(
             Pin(start: 24.0, end: 20.0),
             Pin(size: 57.0, end: 89.0),
             child: Text(
-              'İstediğiniz yemeği sipariş edip \nhemen ödeyebilirsiniz',
+              'You can order the food you want and pay immediately',
               style: TextStyle(
                 fontFamily: 'Arial',
                 fontSize: 25,
@@ -133,7 +135,6 @@ class appInfoPage2 extends StatelessWidget {
                 Navigator.pop(context);
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => appInfoPage3()));
-
               },
             ),
           ),

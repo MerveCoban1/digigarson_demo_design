@@ -1,25 +1,26 @@
-import 'package:digigarson_demo_design/views/signup.dart';
+import 'package:digigarson_demo_design/views/appInfoPage2.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 
-class appInfoPage3 extends StatelessWidget {
-  const appInfoPage3({Key? key}) : super(key: key);
+class XDGooglePixel44XL1 extends StatefulWidget {
+  const XDGooglePixel44XL1({Key? key}) : super(key: key);
 
+  @override
+  _XDGooglePixel44XL1 createState() => _XDGooglePixel44XL1();
+}
+
+class _XDGooglePixel44XL1 extends State<XDGooglePixel44XL1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
-          Pinned.fromPins(
-            Pin(start: -20.0, end: -24.0),
-            Pin(start: 0.0, end: 210.0),
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: const AssetImage('assets/images/start3.png'),
-                  fit: BoxFit.fill,
-                ),
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: const AssetImage('assets/images/start1.png'),
+                fit: BoxFit.fill,
               ),
             ),
           ),
@@ -40,23 +41,25 @@ class appInfoPage3 extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 31.0, end: 31.0),
             Pin(size: 35.0, middle: 0.7904),
-            child: Text(
-              'Yemek Sipariş Et & Öde',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 31,
-                color: const Color(0xe5000000),
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w700,
+            child: Center(
+              child: Text(
+                'Order & Pay Meal',
+                style: TextStyle(
+                  fontFamily: 'Arial',
+                  fontSize: 31,
+                  color: const Color(0xe5000000),
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.left,
               ),
-              textAlign: TextAlign.left,
             ),
           ),
           Pinned.fromPins(
             Pin(start: 24.0, end: 20.0),
             Pin(size: 57.0, end: 89.0),
             child: Text(
-              'İstediğiniz yemeği sipariş edip \nhemen ödeyebilirsiniz',
+              'You can order the food you want and pay immediately',
               style: TextStyle(
                 fontFamily: 'Arial',
                 fontSize: 25,
@@ -85,7 +88,7 @@ class appInfoPage3 extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius:
                     BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                color: const Color(0xff707070),
+                color: const Color(0xfffbaf03),
                 border: Border.all(width: 1.0, color: const Color(0xff707070)),
               ),
             ),
@@ -97,7 +100,7 @@ class appInfoPage3 extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius:
                     BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                color: const Color(0xfffbaf03),
+                color: const Color(0xff707070),
                 border: Border.all(width: 1.0, color: const Color(0xff707070)),
               ),
             ),
@@ -114,28 +117,24 @@ class appInfoPage3 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 40.0, end: 31.0),
+            Pin(size: 27.0, end: 37.0),
             Pin(size: 17.0, end: 37.0),
-            child:
-                // Adobe XD layer: 'Başla' (text)
-                GestureDetector(
-              child: Text(
-                'Başla',
-                style: TextStyle(
-                  fontFamily: 'Arial',
-                  fontSize: 15,
-                  color: const Color(0xff000000),
-                  fontWeight: FontWeight.w700,
+            child: GestureDetector(
+                child: Text(
+                  'İleri',
+                  style: TextStyle(
+                    fontFamily: 'Arial',
+                    fontSize: 15,
+                    color: const Color(0xff000000),
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.left,
                 ),
-                textAlign: TextAlign.left,
-              ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => SignUp()));
-
-              },
-            ),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => appInfoPage2()));
+                }),
           ),
         ],
       ),

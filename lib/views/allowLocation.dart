@@ -9,7 +9,7 @@ class AllowLocation extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(
         children: [
-          new Container(
+          Container(
             height: 300.0,
             decoration: BoxDecoration(
               image: DecorationImage(

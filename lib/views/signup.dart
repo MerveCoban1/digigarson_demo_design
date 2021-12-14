@@ -63,7 +63,7 @@ class _SignUpState extends State<SignUp> {
               ),
               Center(
                 child: Text(
-                  "Digigarson'a Hoş Geldiniz",
+                  "DijiGarson Login",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -72,11 +72,21 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
               ),
-              SignUpButton(
-                  "assets/images/phone.png", Colors.green, "Phone number"),
-              SignUpButton(
-                  "assets/images/facebook.png", Colors.blue, "Facebook"),
-              SignUpButton("assets/images/google.png", Colors.red, "Google"),
+              Padding(
+                padding: EdgeInsets.only(left: width * 0.045),
+                child: SignUpButton(
+                    "assets/images/phone.png", Colors.green, "Phone number"),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: width * 0.045),
+                child: SignUpButton(
+                    "assets/images/facebook.png", Colors.blue, "Facebook"),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: width * 0.045),
+                child: SignUpButton(
+                    "assets/images/google.png", Colors.red, "Google"),
+              ),
             ],
           ),
         ),

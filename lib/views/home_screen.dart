@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen>{
         padding: EdgeInsets.all(0.0),
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text("Digigarson"),
+            accountName: Text("DijiGarson"),
             accountEmail: Text("matrixteknoloji@gmail.com"),
             currentAccountPicture: Container(
               child: Image.asset(
@@ -150,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen>{
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5.0),
             child: Text(
-                "DIGIGARSON",
+                "DIJIGARSON",
               style: TextStyle(
                 fontSize: 25.0,
                 color: Colors.grey,
